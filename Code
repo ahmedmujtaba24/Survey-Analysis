@@ -1,0 +1,17 @@
+# Sample data
+data = [sample data]
+
+# enter teh sample data here
+labels = {1: "option1", 2: "option2", 3: "option3", 4: "option4"}
+
+# Count occurrences of each distinctive entry
+from collections import Counter
+
+# Count the occurrences
+counts = Counter(data)
+
+# Print the results
+print("Counts:")
+for code, count in counts.items():
+    label = labels.get(code, f"Unknown ({code})")  # Handle unexpected entries
+    print(f"{label}: {count}")
